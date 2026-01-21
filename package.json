@@ -1,7 +1,7 @@
 {
-  "name": "fulcrumlabs",
+  "name": "fulcrum",
   "version": "1.0.0",
-  "description": "Fulcrum Labs - Leverage for Discovery",
+  "description": "Fulcrum - Leverage for Discovery",
   "main": "src/index.js",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,7 @@
     "science",
     "fellowship"
   ],
-  "author": "Fulcrum Labs",
+  "author": "Fulcrum",
   "license": "MIT",
   "devDependencies": {
     "vite": "^5.0.0"

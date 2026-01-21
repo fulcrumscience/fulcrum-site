@@ -1,6 +1,6 @@
-# Fulcrum Labs
+# Fulcrum
 
-Website for Fulcrum Labs - Leverage for Discovery.
+Website for Fulcrum - Leverage for Discovery.
 
 ## Development
 
@@ -21,7 +21,7 @@ npm run preview
 ## Project Structure
 
 ```
-fulcrumlabs/
+fulcrum/
 ├── index.html          # Main HTML entry point
 ├── src/
 │   ├── main.js         # JavaScript entry point
@@ -39,4 +39,4 @@ Build the project and deploy the `dist/` folder to your hosting provider:
 npm run build
 ```
 
-The site is designed to be hosted at `fulcrumlabs.org`.
+The site is designed to be hosted at `fulcrum.science`.
