@@ -1,0 +1,42 @@
+# Fulcrum
+
+> Leverage for Discovery
+
+Fulcrum connects exceptional technical talent with world-leading researchers to accelerate scientific breakthroughs. We bridge the gap between AI capability and scientific impact.
+
+## What We Do
+
+We recruit talented engineers and AI researchers to work alongside scientists, translating cutting-edge AI capabilities into meaningful research progress.
+
+## Focus Areas
+
+- Materials Science
+- Drug Discovery
+- Climate Modeling
+- Genomics & Biology
+- Energy Systems
+- Public Health
+- Agricultural Science
+- Neuroscience
+
+## Resources
+
+- Fulcrum Hub: https://hub.fulcrum.science/ - Educational materials on AI for science
+
+## Contact
+
+- Email: hello@fulcrum.science
+- Website: https://fulcrum.science/
+
+## Leadership
+
+- Alex Morcos, Co-Founder - Previously co-founded Hudson River Trading and Chaincode Labs
+- Adam Jonas, Co-Founder - CEO at Chaincode Labs
+
+## For Technologists
+
+If you're an engineer or researcher who wants to apply AI to problems that matter, we want to hear from you.
+
+## For Researchers
+
+If you're a scientist who sees the potential for AI to transform your field, we want to partner with you.
