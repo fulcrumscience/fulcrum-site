@@ -83,13 +83,13 @@ nav.scrolled {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 8rem 2rem 4rem;
+  padding: 4.5rem 2rem 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -108,10 +108,10 @@ nav.scrolled {
 }
 
 .hero-wordmark {
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-size: clamp(2.5rem, 7vw, 5rem);
   font-weight: 400;
   letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.2s;
@@ -122,12 +122,17 @@ nav.scrolled {
 }
 
 .hero-tagline {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(0.7rem, 2.6vw, 1.5rem);
   font-weight: 400;
-  color: var(--text-secondary);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 3rem;
+  font-style: normal;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: none;
+  max-width: none;
+  line-height: 1.4;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 0;
   opacity: 0;
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.4s;
@@ -148,6 +153,21 @@ section {
   padding: 8rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+}
+
+/* Alternating section tint — full-bleed via pseudo-element */
+.mission::before,
+.intro::before,
+.founders::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  background: var(--bg-secondary);
+  z-index: -1;
 }
 
 .section-label {
@@ -178,9 +198,86 @@ h2 {
 .lead-text-mid {
   max-width: 1000px;
 }
+
+.lead-text a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+.lead-text a:hover {
+  color: var(--accent);
+}
 /* Mission Section */
 .mission {
   position: relative;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* Intro (stacked hero + mission) */
+.intro {
+  padding: 9rem 2rem 7rem;
+  display: block;
+}
+
+.intro::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.12;
+}
+
+.intro-left {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-left .hero-wordmark {
+  margin: 0;
+}
+
+.intro-left .hero-tagline {
+  text-align: center;
+  white-space: normal;
+  margin: 0;
+}
+
+.intro-right {
+  text-align: center;
+}
+
+.intro-right .intro-label {
+  margin: 0 auto;
+  max-width: 1000px;
+  font-family: 'Newsreader', serif;
+  font-size: clamp(1.75rem, 3.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--accent);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (max-width: 900px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 7rem 2rem 5rem;
+  }
+  .intro-left,
+  .intro-left .hero-tagline {
+    text-align: center;
+  }
 }
 
 .mission-grid {
@@ -334,6 +431,26 @@ h2 {
   transform: translateY(0);
 }
 
+.model-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.8s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.model-card-link:hover {
+  background: #17171a;
+  transform: translateY(-4px);
+}
+
+.model-card-link:hover h3 {
+  color: var(--accent);
+}
+
+.model-card-link h3 {
+  transition: color 0.3s ease;
+}
+
 .model-card::before {
   content: '';
   position: absolute;
@@ -360,6 +477,27 @@ h2 {
 .model-card p {
   color: var(--text-secondary);
   line-height: 1.8;
+}
+
+.model-card p a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.3s ease;
+}
+
+.model-card p a:hover {
+  color: var(--accent);
+}
+
+.model-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.model-card h3 a:hover {
+  color: var(--accent);
 }
 
 /* Domains Section */
@@ -521,6 +659,10 @@ h2 {
   padding: 10rem 2rem;
   position: relative;
   overflow: hidden;
+}
+
+.cta.cta-minimal {
+  padding: 3rem 2rem;
 }
 
 .cta::before {

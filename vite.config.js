@@ -11,6 +11,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         survey: resolve(__dirname, 'survey/index.html'),
+        fellowship: resolve(__dirname, 'fellowship/index.html'),
+        partnerships: resolve(__dirname, 'partnerships/index.html'),
       },
     },
   },
