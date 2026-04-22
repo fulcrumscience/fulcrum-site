@@ -2,41 +2,49 @@
 
 > Leverage for Discovery
 
-Fulcrum connects exceptional technical talent with world-leading researchers to accelerate scientific breakthroughs. We bridge the gap between AI capability and scientific impact.
+Fulcrum is a public good initiative to accelerate scientific research.
 
-## What We Do
+We place AI engineers with research labs working on hard scientific problems, support organizations and events shaping AI-driven science, and incubate software for more automated and software-defined lab operations.
 
-We recruit talented engineers and AI researchers to work alongside scientists, translating cutting-edge AI capabilities into meaningful research progress.
+## Main Site
 
-## Focus Areas
+- Website: https://fulcrum.science/
 
-- Materials Science
-- Drug Discovery
-- Climate Modeling
-- Genomics & Biology
-- Energy Systems
-- Public Health
-- Agricultural Science
-- Neuroscience
+## What Fulcrum Is Building
 
-## Resources
+### Fulcrum Fellowship
 
-- Fulcrum Hub: https://hub.fulcrum.science/ - Educational materials on AI for science
+AI engineers are matched with scientific labs and research teams that need technical expertise to move faster.
+
+- URL: https://fulcrum.science/fellowship/
+- Focus: embedded AI engineers for scientific labs
+- Audience: AI engineers, scientists, and research labs
+
+### Partnerships & Events
+
+Fulcrum backs communities and programs pushing AI-driven science forward.
+
+- URL: https://fulcrum.science/partnerships/
+- Current sponsorships highlighted on the site:
+  - New Science
+  - Hack-Nation
+  - Nucleate
+
+### Litmus
+
+Litmus is a related effort focused on a future where wet lab science is coordinated, automated, and software-defined.
+
+- URL: https://litmus.science/
+
+## Team
+
+- Alex Morcos, Co-Founder
+- Suhas Daftuar, Co-Founder
+- Adam Jonas, Co-Founder
+- Arun Nijhawan, Litmus
+- Caralie Chrisco, Head of Operations
 
 ## Contact
 
 - Email: hello@fulcrum.science
-- Website: https://fulcrum.science/
-
-## Leadership
-
-- Alex Morcos, Co-Founder - Previously co-founded Hudson River Trading and Chaincode Labs
-- Adam Jonas, Co-Founder - CEO at Chaincode Labs
-
-## For Technologists
-
-If you're an engineer or researcher who wants to apply AI to problems that matter, we want to hear from you.
-
-## For Researchers
-
-If you're a scientist who sees the potential for AI to transform your field, we want to partner with you.
+- LinkedIn: https://www.linkedin.com/company/fulcrumscience
