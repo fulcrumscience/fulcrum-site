@@ -34,7 +34,6 @@ export default defineConfig({
         fellowship: resolve(__dirname, 'fellowship/index.html'),
         fellowshipApply: resolve(__dirname, 'fellowship/apply/index.html'),
         partnerships: resolve(__dirname, 'partnerships/index.html'),
-        gathering: resolve(__dirname, 'gathering/index.html'),
       },
     },
   },
