@@ -14,6 +14,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 
+<script>
+/* Applications close at midnight ET on the deadline date. This runs before paint so the
+   page renders in the correct state with no flash. Fails closed if anything goes wrong.
+   Preview either state with ?applications=open or ?applications=closed. */
+(function(){
+  var DEADLINE = Date.parse('2026-09-16T00:00:00-04:00'); /* midnight ET, night of Sept 15 */
+  var state = 'closed';
+  try {
+    var forced = /[?&]applications=(open|closed)\b/.exec(location.search);
+    state = forced ? forced[1] : (Date.now() < DEADLINE ? 'open' : 'closed');
+  } catch (e) {}
+  document.documentElement.className += ' applications-' + state;
+})();
+</script>
+
 <style>
 :root{
   --bg:#0A0A0B; --surface:#111113; --surface2:#161619;
@@ -53,6 +68,16 @@ h1{font-size:64px;font-weight:300;line-height:.98;letter-spacing:-2px}
 .btn-primary:hover{filter:brightness(1.07)}
 .btn-ghost{border:1px solid var(--gold-soft);color:var(--gold)}
 .btn-ghost:hover{background:var(--gold-bg)}
+
+/* ---------- application open/closed states ---------- */
+.when-open,.when-closed{display:none}
+.applications-open .when-open{display:block}
+.applications-open .when-open.d-flex{display:flex}
+.applications-open .when-open.d-inline{display:inline}
+.applications-closed .when-closed{display:block}
+.closed-note{margin-top:34px;max-width:520px}
+.closed-note .closed-head{font-size:20px;color:var(--text)}
+.closed-note .closed-sub{margin-top:8px;font-size:17px;line-height:1.45;color:var(--muted)}
 
 /* grant fact card */
 .herocard{width:264px;flex-shrink:0;background:var(--gold);border-radius:6px;padding:26px 28px;color:#141310}
@@ -141,8 +166,12 @@ footer a{color:var(--muted)}
       <div class="heroL">
         <h1>Translation Grant</h1>
         <p class="tag">Flexible, direct support for researchers working to move promising science toward real-world use.</p>
-        <div class="cta-row">
+        <div class="cta-row when-open d-flex">
           <a class="btn btn-primary" href="https://form.typeform.com/to/FKvPLC6y" target="_blank" rel="noopener">Apply now</a>
+        </div>
+        <div class="closed-note when-closed">
+          <p class="closed-head">Applications are now closed.</p>
+          <p class="closed-sub">Grantees will be announced soon. Future rounds will be posted here. Check back for the next call.</p>
         </div>
       </div>
       <div class="herocard">
@@ -151,7 +180,8 @@ footer a{color:var(--muted)}
         <div class="amtsub">Per grant · paid directly to you</div>
         <div class="rule"></div>
         <div class="roll">Sept 15</div>
-        <div class="amtsub">Application deadline</div>
+        <div class="amtsub when-open">Application deadline</div>
+        <div class="amtsub when-closed">Applications closed</div>
       </div>
     </div>
   </div>
@@ -277,15 +307,21 @@ footer a{color:var(--muted)}
 
 <div class="wrap" id="apply">
   <div class="cta-band">
-    <h2>Apply Now</h2>
-    <a class="btn btn-primary" href="https://form.typeform.com/to/FKvPLC6y" target="_blank" rel="noopener">Start your application</a>
+    <div class="when-open">
+      <h2>Apply Now</h2>
+      <a class="btn btn-primary" href="https://form.typeform.com/to/FKvPLC6y" target="_blank" rel="noopener">Start your application</a>
+    </div>
+    <div class="when-closed">
+      <h2>Applications are now closed</h2>
+      <p>Applications for this round closed on September 15, 2026. Grantees will be announced soon. Future rounds will be announced on this page. Check back for the next call.</p>
+    </div>
   </div>
 </div>
 
 <footer>
   <div class="wrap">
     <div>© <span id="yr"></span> Fulcrum Science</div>
-    <div><a href="https://fulcrumscience.org">fulcrumscience.org</a> · <a href="https://form.typeform.com/to/FKvPLC6y" target="_blank" rel="noopener">Apply</a></div>
+    <div><a href="https://fulcrumscience.org">fulcrumscience.org</a><span class="when-open d-inline"> · <a href="https://form.typeform.com/to/FKvPLC6y" target="_blank" rel="noopener">Apply</a></span></div>
   </div>
 </footer>
 
